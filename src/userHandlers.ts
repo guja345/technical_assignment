@@ -3,7 +3,7 @@ import { readUsers, writeUsers } from "./fileOperations";
 export async function handleAddUser(args: string): Promise<void> {
   const argsArray = args.trim().split(/\s+/);
   if (argsArray.length !== 3) {
-    console.log("Invalid format. Use: Add <userId> <username> <userpassword>");
+    console.log("Invalid format. Use: Adding <userId> <username> <userpassword>");
     return;
   }
 
@@ -21,7 +21,7 @@ export async function handleAddUser(args: string): Promise<void> {
 export async function handleDeleteUser(args: string): Promise<void> {
   const [userId] = args.trim().split(" ");
   if (!userId) {
-    console.log("Invalid format. Use: Delete <userId>");
+    console.log("Invalid format. Use: Deleting <userId>");
     return;
   }
 
@@ -39,7 +39,7 @@ export async function handleDeleteUser(args: string): Promise<void> {
 export async function handleUpdateUser(args: string): Promise<void> {
   const [userId, newUsername, newPassword] = args.trim().split(" ");
   if (!userId || !newUsername || !newPassword) {
-    console.log("Invalid format. Use: Update <userId> <newUsername> <newPassword>");
+    console.log("Invalid format. Use: Updating <userId> <newUsername> <newPassword>");
     return;
   }
 
